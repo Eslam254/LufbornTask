@@ -5,4 +5,5 @@ steps to run project
 2. open solution frontend and install npm => then run ng serve 
 
 BE using => .net 6
+
 FE using => angular version 17 and node version 18.13.0
