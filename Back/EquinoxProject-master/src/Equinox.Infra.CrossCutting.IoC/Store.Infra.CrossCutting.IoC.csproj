@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Equinox.Application\Store.Application.csproj" />
+		<ProjectReference Include="..\Equinox.Domain\Store.Domain.csproj" />
+		<ProjectReference Include="..\Equinox.Infra.CrossCutting.Identity\Store.Infra.CrossCutting.Identity.csproj" />
+		<ProjectReference Include="..\Equinox.Infra.Data\Store.Infra.Data.csproj" />
+	</ItemGroup>
+
+</Project>

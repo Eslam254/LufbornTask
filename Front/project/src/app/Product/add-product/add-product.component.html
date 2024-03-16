@@ -1,0 +1,72 @@
+<div class="container m-5 d-flex justify-content-center">
+  <form (submit)="submitForm()" [formGroup]="branchesForm" class="">
+
+    <div class="form-group row">
+      <label for="productname" class="col-sm-4 col-form-label">Product name</label>
+      <div class="col-sm-8">
+        <input formControlName="productname" type="text" id="productname" placeholder="Product name"
+               class="form-control" [(ngModel)]="productname" name="productname" required />
+      </div>
+    </div><br>
+  
+    <div class="form-group row">
+      <label for="price" class="col-sm-4 col-form-label">Price</label>
+      <div class="col-sm-8">
+        <input formControlName="price" type="number" id="price" class="form-control"
+               [(ngModel)]="price" name="price" required />
+      </div>
+    </div><br>
+  
+    <div class="form-group row">
+      <label for="quantity" class="col-sm-4 col-form-label">Quantity</label>
+      <div class="col-sm-8">
+        <input formControlName="quantity" type="number" id="quantity" class="form-control"
+               [(ngModel)]="quantity" name="quantity" required />
+      </div>
+    </div><br>
+  
+    <div class="form-group row">
+      <label for="tax" class="col-sm-4 col-form-label">Tax</label>
+      <div class="col-sm-8">
+        <input formControlName="tax" type="number" id="tax" class="form-control"
+               [(ngModel)]="tax" name="tax" required />
+      </div>
+    </div><br>
+  
+    <div class="form-group row">
+      <label for="deliveryCharge" class="col-sm-4 col-form-label">Delivery</label>
+      <div class="col-sm-8">
+        <input formControlName="deliveryCharge" type="number" id="deliveryCharge" 
+               class="form-control" [(ngModel)]="deliveryCharge" name="deliveryCharge" required />
+      </div>
+    </div><br>
+  
+    <div class="form-group row">
+      <label for="description" class="col-sm-4 col-form-label">Description</label>
+      <div class="col-sm-8">
+        <input formControlName="description" type="text" id="description" 
+               class="form-control" [(ngModel)]="description" name="description" required />
+      </div>
+    </div><br>
+  
+    <div class="form-group row">
+      <label for="Merchanname" class="col-sm-4 col-form-label">Merchant Name</label>
+      <div class="col-sm-8">
+        <input formControlName="Merchanname" type="text" id="Merchanname" 
+               class="form-control" [(ngModel)]="Merchanname" name="Merchanname" required />
+      </div>
+    </div>
+  
+    <div class="form-group row justify-content-center">
+      <div class="col-sm-12">
+        <button type="submit" class="btn btn-primary me-3">
+          {{ isEditMode ? "Edit" : "Submit" }}
+        </button>
+        <button (click)="close()" class="btn btn-danger text-light me-3">
+          Close
+        </button>
+      </div>
+    </div>
+  </form>
+  
+</div>

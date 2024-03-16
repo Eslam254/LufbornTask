@@ -1,0 +1,46 @@
+<div class="container-fluid p-4">
+  
+  <h3>Products </h3>
+  <div class="Rebresentive p-3">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col" class="p-3">ID</th>
+        <th scope="col" class="p-3">Product name</th>
+        <th scope="col" class="p-3">Price</th>
+        <th scope="col" class="p-3">Quantity</th>
+        <th scope="col" class="p-3">Tax</th>
+        <th scope="col" class="p-3">Description</th>
+        <th scope="col" class="p-3">Delivery Charge</th>
+        <th scope="col" class="p-3">Merchant name</th>
+        <th scope="col" class="p-3">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let branch of Products;let i=index;">
+        <th scope="row"clas class="p-3">{{ i+1 }}</th>
+        <td class="p-3">{{ branch.productname }}</td>
+        <td class="p-3">{{ branch.price }}</td>
+        <td class="p-3">{{ branch.quantity }}</td>
+        <td class="p-3">{{ branch.tax }}</td>
+        <td class="p-3">{{ branch.description }}</td>
+        <td class="p-3">{{ branch.deliveryCharge }}</td>
+        <td class="p-3">{{ branch.merchanname }}</td>
+        <td class="p-3">
+          <i  (click)="Edit(branch.id)" class="bi bi-pencil-fill"></i>
+          <i (click)="deleteBranch(branch.id)" class=" fs-5 mx-1 del bi bi-trash3-fill"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-center mt-5">
+    <a (click)="modal()" class="btn btn-primary btn-sm"> Add Product </a>
+
+  </div>
+  </div>
+      <div class="text-right m-5 d-flex justify-content-center align-items-center">
+      </div>
+    
+</div>
+
+
